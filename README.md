@@ -1,13 +1,13 @@
-[ci-img]: https://img.shields.io/travis/ciena-frost/ember-frost-app-bar.svg "Travis CI Build Status"
+[ci-img]: https://travis-ci.org/ciena-frost/ember-frost-app-bar.svg "Build Status"
 [ci-url]: https://travis-ci.org/ciena-frost/ember-frost-app-bar
 
-[cov-img]: https://img.shields.io/coveralls/ciena-frost/ember-frost-app-bar.svg "Coveralls Code Coverage"
+[cov-img]: https://coveralls.io/repos/github/ciena-frost/ember-frost-app-bar/badge.svg?branch=master "Code Coverage"
 [cov-url]: https://coveralls.io/github/ciena-frost/ember-frost-app-bar
 
 [npm-img]: https://img.shields.io/npm/v/ember-frost-app-bar.svg "NPM Version"
 [npm-url]: https://www.npmjs.com/package/ember-frost-app-bar
 
-[![Travis][ci-img]][ci-url] [![Coveralls][cov-img]][cov-url] [![NPM][npm-img]][npm-url]
+# ember-frost-app-bar <br /> [![Travis][ci-img]][ci-url] [![Coveralls][cov-img]][cov-url] [![NPM][npm-img]][npm-url]
 
 # ember-frost-app-bar
 the drop-down select widget to rule them all
