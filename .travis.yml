@@ -16,7 +16,8 @@ install:
 - npm install
 - bower install
 after_success:
-- sed -i -- 's/SF:ember-frost-cool-beans\/\(.*\)/SF:addon\/\1.js/' coverage/lcov.info && rm -f coverage/lcov.info--
+- sed -i -- 's/SF:ember-frost-app-bar\/\(.*\)/SF:addon\/\1.js/' coverage/lcov.info
+  && rm -f coverage/lcov.info--
 - cat coverage/lcov.info | coveralls
 addons:
   apt:
@@ -28,6 +29,7 @@ env:
   matrix:
   - CXX=g++-4.8
   global:
+    secure: j3ajOOgrjHre51wOwhz77M98sCAhQLLwSTE4qhKvt8mME7Wk/cQDndRHbiXogdgwtG6Gp3dUs6GYznFMkpYPiJYOHLQSOY+JeN3h2IdC/lPA4IxFUGtIvdbtxI+9Q+qmG/YkuX1gb5CWiNhNC8U9wAswb5OiEa73WYxCJPA2XD2iwUesIbz/TxqaufcDXRLCnePiaLbTGJAgmM8oVJ+5VQDJLZAxq8GBdC1YOu1Ghm2P0+kpGavo3WQtaJlYBiInfzwfrJ9cqB+zh62mNQ6GqNUOlNXOSVc0k88PFhg7ba7NkZCCHemAc1jv8qfrTdDnQLEQjSJpXY7uloYHoT8cn6RMrmCvl1bJdXSbjTBMW5329955gTNy0oyMjEN7OLq3MCZvvLK+btGrMPqcrfNB6OF2Cy3wQHLd3gQXesOwKJs4MaToPcj3WMxKssIG542mYvQ7qJcdKqOWYhPCRVcHObpHOOEupAo9rZv4lpNjgytmDYFOuFOLXF1d/5C6VURxSRx1kIcxIdCeuyNY9BoZOS98oovxC7bar5RUfEelT0hKw8gJ8vQNbRhQai9YR/6cOVRZj9ytgfhxTusW/0SHwgFyrWzqZKw4r3e/JPUW3JDneetOrfvIZe+z7KUEJQSLQRH85c0seFXURN6aae1ri/9Vb1vDG56uoAMmH3YiPPA=
 before_deploy:
 - pr-bumper bump
 deploy:
@@ -35,6 +37,7 @@ deploy:
   email: npm.ciena@gmail.com
   skip_cleanup: true
   api_key:
+    secure: cj6qzYg328ViitzqWazv2oo5gBx9RwE23Ixiwg1/PkpR27PBQ/iM96bkOYIHuykYurD75QODY6/eQrZZtMBydg0cYwqK1kPU9FHOyzr9WXHBWEo9QFffNg4EXxTPDmn6594Rf45LAxnNOkjdFQlKFsTQ7hNpR5YCod0cPzorwVUSd3lXJPrX74SpJs7C3JGCmJdDVIIHuXbvYZuYVXvUW/PDB4+hNB9YhBr40QhmUBi3rHgoe6lcHSRC3pDa7a/TJsbDRsQlCtu1/r5Dbj/Cjzbn+iJYApWIz9ZG2bHVC9pdk9qv5O1vKuF43mpLjXSraMY+4izbsganJTW5bT9457D8XtP4aN5o/aALXhFqELzO052SnJgP7woTMwKM2jNEk7FWf96rzQaKuiJna36WhIv3VzTxLb8Dtyt37TdMexc0SFrYFGHe6xXMeOMxLb+0LQSxnWENDg2Mk9dXJSed0Hm4njofYIPL6AM5u69gHdv4bJfUJq+0JWtBq/4dZOAZ4eaJS6xrB4nSbKgja9zJRzOGe9EzwdR5lu4LBEa3x0TE7+vTb1T5yzNbUhPLxsNXX3DuJCeTJZVlwiuSCEH07wQaAz7D8yovbFudNaNuBVmS0sgatpfnKkqWZUjcsgZDUaGpkHNSNeBMP6OIqiyRX/F6Ok7sx1QjbdWxHSl94Lk=
   on:
     branch: master
     tags: false
@@ -42,3 +45,4 @@ after_deploy:
 - .travis/publish-gh-pages.sh
 notifications:
   slack:
+    secure: SeTtbBsgDdt5Apa+YcwfJhttp9nbClyH9erSMZQAKuQU5r8CeWXWCuPn3nod2INwKmk0eY5AmMAB+u3SAF0XpcotjH19bY8G5zFo06rhXH8emKxeKUX+6BzM/bi6pke7cp72EkYQiYNRWiXCJfZci9dhY8dK2w2wxKxb1Z7BSYQR/banvio+iigvraGarbvvDjRtrGitCdPhIgl0dwdkhYVbqa/xLAkTgF5XaDhd9hHxZQo9CXrxf0h/7ZWbvxv5htqKgokLGkNHWNAe6lE790jcKUXO/EBUMq1ehyEs0rqIhkrzUDlPbWD0wWaNprABfisML4CeYfxH75/JgKl31nT1DRyGJVb40nsaC/3IOD0DwdKGsTzFqPqR64BHHm15ITJMTahgkst8RWWUUfkePrQYo+QQKJfHyM9vhJfcRDVKfdSuldm8AzvU68avESHyXST/b1MgjL+EyPJfDt5GiNEcW7dVMrRSJE8L8nqMT+Xvi4SQ4YAv/o4Mi+2CmPr6sKcZ7CnyV2i4vxHwLHh/9chYehE+/EFX6ffiV/uCgj+zG0K+f6QL3ykWB4v+hrKTgw6HHofllouCYkOzyeiZWXXU8kkgfwBRezSaD6HySzWmXtOthNswtOWdaW9V/TN+Sw2ZaB2KtY4FH23Hjuc40VaG8G3+aHHk/3fqvwQDaCE=
