@@ -2,6 +2,7 @@
   "name": "ember-frost-app-bar",
   "version": "0.0.2",
   "description": "The default blueprint for ember-cli addons.",
+  "frostGuideDirectory": "design-patterns/application-bar",
   "directories": {
     "doc": "doc",
     "test": "tests"
