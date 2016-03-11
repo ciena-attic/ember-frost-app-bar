@@ -17,7 +17,11 @@
   "engines": {
     "node": ">= 5.0.0"
   },
-  "author": "",
+  "author": "Quincy Le (https://github.com/quincyle)",
+  "contributors": [
+    "Matthew Dahl (https://github.com/sandersky)",
+    "Eric White (https://github.com/EWhite613)"
+  ],
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.2.0",
