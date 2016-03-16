@@ -20,7 +20,6 @@ the drop-down select widget to rule them all
 ```
 ember install ember-frost-app-bar
 ```
-
 ## API
 Coming soon
 
