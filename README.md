@@ -9,7 +9,6 @@
 
 # ember-frost-app-bar <br /> [![Travis][ci-img]][ci-url] [![Coveralls][cov-img]][cov-url] [![NPM][npm-img]][npm-url]
 
-the drop-down select widget to rule them all
 
  * [Installation](#Installation)
  * [API](#API)
