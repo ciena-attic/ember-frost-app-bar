@@ -1,4 +1,3 @@
-/*jshint node:true*/
 module.exports = {
   description: '',
 
@@ -7,12 +6,12 @@ module.exports = {
     Triggered by 'ember install <addon name>'.
 
     @returns {Promise} package names and versions
-   */
+  */
   afterInstall: function () {
-   return this.addAddonsToProject({
-     packages: [
-       {name: 'ember-frost-core', target: '>=0.0.14 <2.0.0'}
-     ]
-   })
+    return this.addAddonsToProject({
+      packages: [
+        {name: 'ember-frost-core', target: '>=0.0.14 <2.0.0'}
+      ]
+    })
   }
 }
